@@ -35,7 +35,7 @@ export const styles = StyleSheet.create({
       backgroundColor: '#000',
       marginTop: 15,
       width: '100%',
-      height: 50,
+      height: 55,
       borderRadius: 25,
       marginBottom: 15,
     },
@@ -43,13 +43,14 @@ export const styles = StyleSheet.create({
     text:{
       color: '#fff',
       fontSize: 20,
+      fontWeight: 'bold',
       fontFamily: fonts.text,
     },
 
     textFirst:{
       color: '#fff',
       fontSize: 25,
-      marginTop: 60,
+      marginTop: 35,
     },
 
     textSecond:{

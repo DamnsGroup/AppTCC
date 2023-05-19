@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { styles } from './style';
+import { AntDesign } from '@expo/vector-icons';
 
 import {
     SafeAreaView,
@@ -65,85 +66,23 @@ export default function Home() {
     return (
         <View style={{ flex: 1 }}>
             <StatusBar barStyle="light-content" />
-            <View style={{ flex: 1 }}>
+            <View style={{ flex: 1, backgroundColor: '#fff'}}>
                 <View style={styles.header}>
+                <Text style={styles.primaryTilt}>Olá, Cliente!</Text>
+                        
+                        <Text style={styles.secondaryTilt}>Bem vindo a sua casa segura:</Text>
                     <View style={styles.containerHeader}>
-
+                        
                         <TouchableOpacity
                             style={styles.menu}
                             onPress={() => navigation.dispatch(DrawerActions.openDrawer())}
                         >
-                            <MaterialIcons name="menu" size={35} color="black" />
+                            <AntDesign name="appstore1" size={35} color="black" />
                         </TouchableOpacity>
 
-                        <Image style={styles.logo} source={require('../../assets/damn2.png')} />
-
                     </View>
-                </View>
-
-
-                    <ScrollView
-                        style={{ flex: 1 }}
-                        showsVerticalScrollIndicator={false}
-                        nestedScrollEnabled={true}
-                        refreshControl={
-                            <RefreshControl
-                                refreshing={refreshing}
-                                onRefresh={onRefresh}
-                            />
-                        }
-                    >
-
-                        <View style={styles.circleProgressView}>
-                            <View style={styles.textProgressContainer}>
-                                <Text style={styles.textProgressTitle}>Problemas solucionados</Text>
-                                <Text style={styles.textProgress}>1 solucionado</Text>
-                            </View>
-
-                            <AnimatedCircularProgress
-                                size={80}
-                                width={8}
-                                fill={50}
-                                tintColor="#d61500"
-                                backgroundColor="#e0e0e0"
-                                lineCap={"round"}
-                            >
-                                {
-                                    (fill) => (
-                                        <Text style={styles.numberInside}>1/2</Text>
-                                    )
-                                }
-                            </AnimatedCircularProgress>
-                        </View>
-
-
-                        <View style={styles.containerBox}>
-
-                            <TouchableOpacity onPress={() => navigation.navigate("Usuario")}>
-                                <View>
-                                    <View style={styles.box}>
-                                        <MaterialIcons style={styles.iconRegistered} name="lock-clock" size={70} color="#b82d" />
-                                        <View style={styles.textos}>
-                                            <Text style={styles.rText}>Total de usuários</Text>
-                                            <Text style={styles.lenghtText}>{dados.total_usuarios}</Text>
-                                        </View>
-                                    </View>
-                                    <Text style={styles.textFooter}>Usuários Cadastrados</Text>
-                                </View>
-                            </TouchableOpacity>
-
-                        </View>
-
-
-                    </ScrollView>
-                
+                </View>       
             </View>
         </View>
-
-
-
-
-
-
     )
 }

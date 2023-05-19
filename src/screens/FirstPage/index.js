@@ -20,13 +20,11 @@ import {
   export default function Login() {
     const navigation= useNavigation();
 
-    const [logged, setLogged] = useState(0);
-
     async function login(){      
 
         navigation.reset({
           index: 0,
-          routes: [{ name: 'Home' }]
+          routes: [{ name: 'Entrar' }]
         });
     }
   

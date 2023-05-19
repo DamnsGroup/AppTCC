@@ -8,8 +8,7 @@ export const styles = StyleSheet.create({
     },
 
     header:{
-        
-        backgroundColor: '#fafafa',
+        backgroundColor: '#fff',
         shadowColor: 'rgba(0, 0, 0, 0.1)',
         shadowOpacity: 0.1,
         elevation: 6,
@@ -17,14 +16,28 @@ export const styles = StyleSheet.create({
         shadowOffset : { width: 1, height: 5},
         borderBottomRightRadius: 5,
         borderBottomLeftRadius: 5,
-        height: 55,
+        height: 100,
     },
 
     menu:{
         position: 'absolute',
-        left: 20,
-        alignSelf: "center",
-        top: 10,
+        left: 325,
+        top: -45,
+    },
+
+    primaryTilt:{
+        marginTop: 20,
+        marginLeft: 40,
+        fontWeight: 'bold',
+        fontSize: 25,
+        fontFamily: fonts.text,
+    },
+
+    secondaryTilt:{
+        marginLeft: 40,
+
+        fontSize: 15,
+        fontFamily: fonts.text,
     },
 
     logo:{
@@ -109,7 +122,6 @@ export const styles = StyleSheet.create({
         marginTop: 30,
         borderTopLeftRadius: 15,
         borderTopRightRadius: 15,
-        shadowColor: 'rgba(0, 0, 0, 0.1)',
         shadowOpacity: 0.1,
         elevation: 5,
         shadowRadius: 15,
@@ -124,7 +136,7 @@ export const styles = StyleSheet.create({
     },
 
     textFooter:{
-        borderTopColor: '#ccc',
+        borderTopColor: '#fff',
         paddingTop: 15, 
         paddingBottom: 10, 
         borderTopWidth: 1,
