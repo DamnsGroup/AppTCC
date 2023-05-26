@@ -50,4 +50,19 @@ export const styles = StyleSheet.create({
         alignSelf: "center",
         marginTop: 10,
     },
+
+    textoNome:{
+        fontSize: 17,
+        color: 'white',
+        marginLeft: 100,
+        marginTop: -40,
+    },
+
+    perfil:{
+        marginLeft: 17,
+        borderRadius: 50,
+        width: 65,
+        height: 65,
+        marginTop: 30,
+    }
 })

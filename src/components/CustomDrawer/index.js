@@ -1,6 +1,7 @@
 import React from 'react';
 import { Alert, Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import { MaterialIcons, Entypo } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
 
 import { styles } from './styles';
 import { DrawerActions, useNavigation } from '@react-navigation/core';
@@ -32,9 +33,11 @@ const CustomDrawer= FC = () => {
 
     return (
         <View style={{ flex: 1, backgroundColor: '#fff' }}>
-            <Image style={styles.logo} source={require('../../assets/damn2.png')} />
 
-            <View style={{ width: '90%', backgroundColor: '#c1c1c1', height: 0.5, alignSelf: 'center', marginBottom: 5, marginTop: 20 }}></View>
+            <View style={{ width: '100%', backgroundColor: '#407BFF', height: 120, alignSelf: 'center', marginBottom: 5, borderBottomEndRadius: 10, borderBottomStartRadius: 10 }}>
+                <Image style={styles.perfil} source={require('../../assets/perfil.png')}/>
+                <Text style={styles.textoNome}>Nome do Usuario</Text>
+            </View>
 
             <ScrollView
                 style={styles.container}
@@ -43,13 +46,27 @@ const CustomDrawer= FC = () => {
                     <TouchableOpacity
                         style={styles.Pages}
                         onPress={() => {
-                            navigation.navigate("Usuario")
+                            navigation.navigate("Home")
                             navigation.dispatch(DrawerActions.closeDrawer())
                         }}
                     >
-                        <MaterialIcons style={styles.iconRegistered} name="people-alt" size={30} color="gray" />
+                        <AntDesign name="home" size={24} color="black" />
 
-                        <Text style={styles.PagesText}>Usuários</Text>
+                        <Text style={styles.PagesText}>Home</Text>
+                    </TouchableOpacity>
+                </View>
+
+                <View>
+                    <TouchableOpacity
+                        style={styles.Pages}
+                        onPress={() => {
+                            navigation.navigate("Configuracoes")
+                            navigation.dispatch(DrawerActions.closeDrawer())
+                        }}
+                    >
+                        <AntDesign name="setting" size={24} color="black" />
+
+                        <Text style={styles.PagesText}>Configuracoes</Text>
                     </TouchableOpacity>
 
                    
