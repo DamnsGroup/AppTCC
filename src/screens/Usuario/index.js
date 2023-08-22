@@ -134,10 +134,7 @@ export default function Usuario() {
                         <Ionicons name="add-outline" size={35} color="#fff" />
                     </TouchableOpacity>
                 </View>
-
-
       </View>
-
     </View>
   )
 }

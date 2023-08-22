@@ -17,7 +17,17 @@ export const styles = StyleSheet.create({
         borderBottomRightRadius: 5,
         borderBottomLeftRadius: 5,
         height: 100,
+        marginTop: 30,
     },
+
+    content: {
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)',
+      },
 
     menu:{
         position: 'absolute',
@@ -45,6 +55,87 @@ export const styles = StyleSheet.create({
         height: 30,
         alignSelf: "center",
         marginTop: 10,
+    },
+
+    painel:{
+        borderRadius: 30,
+        marginLeft: 20,
+        marginRight: 20,
+        width: 350,
+        height: 110,
+        backgroundColor: '#E7F7ED',
+    },
+
+    painelTilt:{
+        color: '#000',
+        marginTop: 35,
+        textAlign: "center",
+        fontWeight: 'bold',
+    },
+
+    painelEletricidade:{
+        marginTop: 35,
+        borderRadius: 30,
+        marginLeft: 20,
+        marginRight: 210,
+        width: 150,
+        height: 125,
+        backgroundColor: '#E7F7ED',
+    },
+
+    painelText:{
+        color: '#000',
+        textAlign: "center",
+        fontWeight: 'bold',
+        marginTop: 0,
+    },
+
+    painelGas:{
+        marginTop: -125,
+        borderRadius: 30,
+        marginLeft: 210,
+        marginRight: 20,
+        width: 150,
+        height: 125,
+        backgroundColor: '#E7F7ED',
+    },
+
+    painelSensor:{
+        marginTop: 30,
+        borderRadius: 30,
+        marginLeft: 20,
+        marginRight: 210,
+        width: 150,
+        height: 125,
+        backgroundColor: '#E7F7ED',
+    },
+
+    painelIncendio:{
+        marginTop: -125,
+        borderRadius: 30,
+        marginLeft: 210,
+        marginRight: 20,
+        width: 150,
+        height: 125,
+        backgroundColor: '#E7F7ED',
+    },
+
+    alerta:{
+        marginTop: 20,
+        borderRadius: 30,
+        marginLeft: 20,
+        marginRight: 20,
+        width: 340,
+        height: 75,
+        backgroundColor: '#E20000',
+    },
+
+    painelAlerta:{
+        color: '#fff',
+        textAlign: "center",
+        fontWeight: 'bold',
+        marginTop: 0,
+        /* colocar a tag de invisivel*/
     },
 
     containerHeader:{

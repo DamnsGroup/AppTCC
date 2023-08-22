@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
 
     Pages:{
         flexDirection: 'row',
-        marginTop: 15,
+        marginTop: 30,
     },
 
     Sair:{
@@ -52,6 +52,7 @@ export const styles = StyleSheet.create({
     },
 
     textoNome:{
+        fontWeight: 'bold',
         fontSize: 17,
         color: 'white',
         marginLeft: 100,

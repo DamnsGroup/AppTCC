@@ -30,7 +30,6 @@ import {
       if(res.data.result === 'Dados Incorretos!'){
         Alert.alert('Ops!', 'Dados Incorretos!');
       }else{
-    //    await AsyncStorage.setItem('@user', JSON.stringify(res.data.result[0].id));
         
         navigation.reset({
           index: 0,
@@ -72,7 +71,7 @@ import {
       <View style={styles.form}>
         <TextInput
           style={styles.login}
-          placeholder="Email"
+          placeholder="Nome"
           value={nome}
           onChangeText={ (nome) => setNome(nome)}
         />

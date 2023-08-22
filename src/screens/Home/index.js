@@ -2,19 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { styles } from './style';
 import { AntDesign } from '@expo/vector-icons';
 
-import {
-    SafeAreaView,
-    Text,
-    View,
-    ScrollView,
-    TouchableOpacity,
-    Image,
-    ActivityIndicator,
-    RefreshControl,
-    StatusBar,
-    Alert,
-
-} from 'react-native';
+import {SafeAreaView, Text, View, ScrollView, TouchableOpacity, Image, ActivityIndicator, RefreshControl, StatusBar, Alert} from 'react-native';
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
@@ -23,45 +11,44 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { DrawerActions, useNavigation } from '@react-navigation/core';
 import api from '../../services/api';
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
-
+import DrawerRoutes from '../../routes/drawer.routes';
 import { useIsFocused } from '@react-navigation/native';
+import CustomDrawer from '../../components/CustomDrawer';
 
 export default function Home() {
     const navigation= useNavigation();
-    const isFocused = useIsFocused();
 
-    const [dados, setDados] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
-    const [refreshing, setRefreshing] = useState(false);
-    const [usu, setUsu] = useState('');
+    async function incendio(){      
 
-
-    async function listarDados() {
-
-        try {
-            const user = await AsyncStorage.getItem('@user');
-            const res = await api.get(`pam3etim/bd/dashboard/listar-cards.php?user=${user}`);
-            setDados(res.data);
-
-        } catch (error) {
-            console.log("Erro ao Listar " + error);
-        } finally {
-            setIsLoading(false);
-            setRefreshing(false);
-
-        }
+        navigation.reset({
+          index: 0,
+          routes: [{ name: 'Incendio' }]
+        });
     }
 
-    useEffect(() => {
-        listarDados();
-    }, [isFocused]);
+    async function sensor(){      
 
-    const onRefresh = () => {
-        setRefreshing(true);
-        listarDados();
+        navigation.reset({
+          index: 0,
+          routes: [{ name: 'Sensor' }]
+        });
+    }
 
-    };
+    async function gas(){      
 
+        navigation.reset({
+          index: 0,
+          routes: [{ name: 'Gas' }]
+        });
+    }
+
+    async function eletricidade(){      
+
+        navigation.reset({
+          index: 0,
+          routes: [{ name: 'Eletricidade' }]
+        });
+    }
 
     return (
         <View style={{ flex: 1 }}>
@@ -76,12 +63,23 @@ export default function Home() {
                         <TouchableOpacity
                             style={styles.menu}
                             onPress={() => navigation.dispatch(DrawerActions.openDrawer())}
+                            
                         >
                             <AntDesign name="appstore1" size={35} color="black" />
                         </TouchableOpacity>
 
                     </View>
-                </View>       
+                </View>   
+            <View style={styles.body}>
+                <View style={styles.painel}></View>
+                <Text style={styles.painelTilt}>Painel para acessar as informações da sua casa</Text>
+                <TouchableOpacity  onPress={eletricidade} style={styles.painelEletricidade}><Text style={styles.painelText}>Eletricidade</Text></TouchableOpacity>
+                <TouchableOpacity  onPress={gas} style={styles.painelGas}><Text style={styles.painelText}>Gás</Text></TouchableOpacity>
+                <TouchableOpacity  onPress={sensor} style={styles.painelSensor}><Text style={styles.painelText}>Sensor</Text></TouchableOpacity>
+                <TouchableOpacity  onPress={incendio} style={styles.painelIncendio}><Text style={styles.painelText}>Incêncio</Text></TouchableOpacity>
+              {/*ver uma forma de conectar a informação do banco ao mobile*/}
+                <TouchableOpacity  onPress={incendio} style={styles.alerta}><Text style={styles.painelAlerta}>Alerta</Text></TouchableOpacity>
+            </View>
             </View>
         </View>
     )

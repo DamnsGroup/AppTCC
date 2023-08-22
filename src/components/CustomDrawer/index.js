@@ -2,7 +2,7 @@ import React from 'react';
 import { Alert, Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import { MaterialIcons, Entypo } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
-
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { styles } from './styles';
 import { DrawerActions, useNavigation } from '@react-navigation/core';
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -51,11 +51,9 @@ const CustomDrawer= FC = () => {
                         }}
                     >
                         <AntDesign name="home" size={24} color="black" />
-
                         <Text style={styles.PagesText}>Home</Text>
                     </TouchableOpacity>
                 </View>
-
                 <View>
                     <TouchableOpacity
                         style={styles.Pages}
@@ -65,15 +63,9 @@ const CustomDrawer= FC = () => {
                         }}
                     >
                         <AntDesign name="setting" size={24} color="black" />
-
-                        <Text style={styles.PagesText}>Configuracoes</Text>
+                        <Text style={styles.PagesText}>Configuracões</Text>
                     </TouchableOpacity>
-
-                   
                 </View>
-
-
-       
             </ScrollView>
 
             <View style={styles.footer}>
@@ -81,8 +73,8 @@ const CustomDrawer= FC = () => {
                     onPress={() => logout()}
                     style={styles.Sair}
                 >
-                    <MaterialIcons name="subdirectory-arrow-left" size={25} color="gray" />
-                    <Text style={styles.SairText}>Sair da conta</Text>
+                    <MaterialCommunityIcons name="exit-to-app" size={24} color="black" />
+                    <Text style={styles.SairText}>Desconectar-Se</Text>
                 </TouchableOpacity>
             </View>
         </View>

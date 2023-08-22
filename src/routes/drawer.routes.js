@@ -29,7 +29,6 @@ const DrawerRoutes = () => {
         <Drawer.Screen 
             name="Home"
             component={Home}
-            
         />
 
     </Drawer.Navigator>
