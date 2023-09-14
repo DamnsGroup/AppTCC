@@ -20,7 +20,7 @@ const AppTab = createBottomTabNavigator();
 
 const AuthRoutes = () => {
     const navigation = useNavigation();
-
+{/* arrumar essa budega aqui debaixo mas o codigo ta funcionando então isso que importa, e olha essa mensagem matheus do futuro isso é um aviso */}
     return (
         <AppTab.Navigator
         screenOptions={{
@@ -31,8 +31,8 @@ const AuthRoutes = () => {
                 headerShown:false,
                 
                 tabBarStyle:{
-                    height: 65,
-                    paddingTop: 10
+                    height: 0,
+                    paddingTop: 1
                 },
             }}
 
@@ -41,194 +41,8 @@ const AuthRoutes = () => {
                     name="Inicio"
                     component={DrawerRoutes}
 
-                    options={{
-                        tabBarIcon: (({size, color}) => (
-                            <AntDesign
-                                name="home"
-                                size={size}
-                                color={color}
-                            />
-                        )),
-                        
-                        tabBarLabel: (({ focused, color}) => (
-                            <View>
-                                <Text
-                                    style={ focused ? {
-                                        color: color,
-                                        fontFamily: fonts.text,
-                                        fontSize: 12,
-                                        textAlign: 'center',
-                                    } : {
-                                        color: color,
-                                        fontFamily: fonts.text,
-                                        fontSize: 12
-                                    }}
-                                >
-                                    Inicio
-                                </Text>
-                                <View
-                                    style={ focused ? {
-
-                                        backgroundColor: color,
-                                        borderColor: color,
-                                        width: 45,
-                                        height: 2,
-                                        borderTopLeftRadius: 5,
-                                        borderTopRightRadius: 5,
-                                        marginTop: 5,
-                                    } : {
-                                        height: 2,
-                                    }}
-                                >
-                                </View>
-                            </View>
-                        ))
-                    }}
                 />
 
-                <AppTab.Screen
-                    name="Usuario"
-                    component={Usuario}
-                    options={{
-                        tabBarIcon: (({ size, color}) => (
-                            <MaterialIcons
-                                name="schedule"
-                                size={size} 
-                                color={color} 
-                            />
-                        )),
-
-                        tabBarLabel: (({ focused, color}) => (
-                            <View>
-                                <Text
-                                    style={ focused ? {
-                                        color: color,
-                                        fontFamily: fonts.text,
-                                        fontSize: 12,
-                                        textAlign: 'center',
-
-                                    } : {
-                                        color: color,
-                                        fontFamily: fonts.text,
-                                        fontSize: 12
-                                    }}
-                                >
-                                    Usuários
-                                </Text>
-                                <View
-                                    style={ focused ? {
-                                        backgroundColor: color,
-                                        borderColor: color,
-                                        width: 65,
-                                        height: 2,
-                                        borderTopLeftRadius: 5,
-                                        borderTopRightRadius: 5,
-                                        marginTop: 5,
-                                    } : {
-                                        height: 2,
-                                    }}
-                                >
-                                </View>
-                            </View>
-                        ))
-                    }}
-                />
-
-                <AppTab.Screen
-                    name="Aba 3"
-                    component={Usuario}
-                    options={{
-                        tabBarIcon: (({size, color}) => (
-                            <MaterialCommunityIcons
-                                name="calendar-clock"
-                                size={size}
-                                color={color}
-                            />
-                        )),
-
-                        tabBarLabel: (({ focused, color}) => (
-                            <View>
-                                <Text
-                                    style={ focused ? {
-                                        color: color,
-                                        fontFamily: fonts.text,
-                                        fontSize: 12,
-                                        textAlign: 'center',
-                                    } : {
-                                        color: color,
-                                        fontFamily: fonts.text,
-                                        fontSize: 12
-                                    }}
-                                >
-                                    Usuario
-                                </Text>
-                                <View
-                                    style={ focused ? {
-                                        backgroundColor: color,
-                                        borderColor: color,
-                                        width: 90,
-                                        height: 2,
-                                        borderTopLeftRadius: 5,
-                                        borderTopRightRadius: 5,
-                                        marginTop: 5,
-                                    } : {
-                                        height: 2,
-                                    }}
-                                >
-                                </View>
-                            </View>
-                        ))
-                    }}
-                />
-
-                <AppTab.Screen
-                    name="Aba 4"
-                    component={Usuario}
-
-                    options={{
-                        tabBarIcon: (({ size, color}) => (
-                            <Ionicons
-                                name="people-outline"
-                                size={size} 
-                                color={color} 
-                            />
-                        )),
-
-                        tabBarLabel: (({ focused, color}) => (
-                            <View>
-                                <Text
-                                    style={ focused ? {
-                                        color: color,
-                                        fontFamily: fonts.text,
-                                        fontSize: 12,
-                                        textAlign: 'center',
-
-                                    } : {
-                                        color: color,
-                                        fontFamily: fonts.text,
-                                        fontSize: 12
-                                    }}
-                                >
-                                    Pessoas
-                                </Text>
-                                <View
-                                    style={ focused ? {
-                                        backgroundColor: color,
-                                        borderColor: color,
-                                        width: 60,
-                                        height: 2,
-                                        borderTopLeftRadius: 5,
-                                        borderTopRightRadius: 5,
-                                        marginTop: 5,
-                                    } : {
-                                        height: 2,
-                                    }}
-                                >
-                                </View>
-                            </View>
-                        ))
-                    }}
-                />
         </AppTab.Navigator>
     )
 }

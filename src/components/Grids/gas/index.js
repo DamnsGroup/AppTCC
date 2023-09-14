@@ -22,12 +22,11 @@ CardUsuarios = ({ data }= DadosProps) => {
    
     const [abrirModal, setAbrirModal] = useState(false);
     const navigation= any = useNavigation();
-        
-      
+    
     return (
         <>
             {data.cod_gas === undefined && data.quantidade === undefined ?
-               
+                
                <Text style={{ color: '#000', fontSize: 13, marginTop:10, alignContent:"center", textAlign:"center" }}>Nenhum Registro Encontrado :(</Text>
                 
                 :
@@ -50,60 +49,6 @@ CardUsuarios = ({ data }= DadosProps) => {
                         </View>    
                 </View>
             }
-
-
-
-<Modal 
-        visible={abrirModal}
-        animationType={'fade'}
-        transparent={true}
-        onRequestClose={() => {
-          setAbrirModal(!abrirModal)
-        }}
-      >
-          <View style={styles.centralizarModal}>
-         <View style={styles.CardContainerModal}>
-         <TouchableOpacity
-              style={styles.removeItem}
-              onPress={() => setAbrirModal(false)}
-            >
-              <EvilIcons name="close" size={25} color="black" />
-            </TouchableOpacity>
-         <Text style={styles.Cliente}>{data.nome} - {data.cidade}</Text>
-                
-
-                <View style={styles.Section}>
-                    <MaterialIcons style={styles.Icon} name="people-outline" size={22} color="#c1c1c1" />
-                                      
-                </View>              
-            
-
-               
-                <View style={styles.Section}>
-                    <MaterialIcons style={styles.Icon} name="mail" size={22} color="#c1c1c1" />
-                </View>              
-
-
-                 <TouchableOpacity onPress={() => Linking.openURL(url + 'painel/images/perfil/' + data.foto)}>
-                            {(() => {
-                                if (data.foto != 'sem-foto.jpg' && data.foto != '' && data.foto != null) {
-
-                                    return (
-                                        <View style={styles.viewImg}>
-                                            <Image style={styles.ImagemModal} source={{ uri: (url + 'painel/images/perfil/' + data.foto) }} />
-                                            <Text style={styles.textoAbrir}>(Clique para Abrir)</Text>
-                                        </View>
-                                    )
-
-                                }
-
-                            })()}
-                        </TouchableOpacity>
-             </View>
-             </View>
-          </Modal>
-
-
 
         </>
     );

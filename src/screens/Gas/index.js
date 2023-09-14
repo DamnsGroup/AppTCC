@@ -25,6 +25,48 @@ export default function Usuario() {
         index: 0,
         routes: [{ name: 'Home' }]
       });
+
+      async function fetchPage() {
+        try {
+          const response = await api.get(`pam3etim/bd/usuarios/vazamento.php`);
+          const quantidade = response.data.quantidade; // Substitua pelo nome real do campo no seu banco de dados
+          console.log(data.quantidade);
+          //setPage(quantidade);        
+        
+          if(quantidade > 10)
+          {
+            Alert.alert('oi')
+          }
+          else
+          {
+           // Alert.alert('oiiii')
+          }
+        
+        }
+
+         catch (error) {
+          console.log(error);
+        }
+      }
+
+      async function alerta(){
+        try{
+     
+         quantidade = response.data.quantidade; // Substitua pelo nome real do campo no seu banco de dados
+          setPage(quantidade);        
+        
+          Alert.alert(quantidade)
+          
+        }
+        catch(error) {
+          console.log(error);
+        }
+       
+      }
+    
+      useEffect(() => {
+        fetchPage(); // Busque o valor do alerta quando a tela for carregada
+      }, []);
   }
 
     async function loadData() {        

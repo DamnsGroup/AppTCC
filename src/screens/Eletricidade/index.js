@@ -91,8 +91,8 @@ export default function Usuario() {
                           <Ionicons name="arrow-back-outline" size={24} color="black" />
                       </TouchableOpacity>
                   </View>
+                  <Text style={styles.secondaryTilt}>Registros eletricos da sua casa</Text>
               <View style={styles.body}>
-              <Text style={styles.grafic}>Registros eletricos da sua casa</Text>
               <View style={{ flex: 1, height: Dimensions.get('window').height + 30, }}>
 
                <FlatList

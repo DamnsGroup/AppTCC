@@ -10,6 +10,7 @@ export const styles = StyleSheet.create({
         height: 45,
         justifyContent: "center",
         marginBottom: 5,
+        marginTop: 20,
         zIndex: 11,
         borderRadius: 3,
     },

@@ -3,6 +3,7 @@ import { Alert, Image, ScrollView, Text, TouchableOpacity, View } from 'react-na
 import { MaterialIcons, Entypo } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { FontAwesome5 } from '@expo/vector-icons';
 import { styles } from './styles';
 import { DrawerActions, useNavigation } from '@react-navigation/core';
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -58,12 +59,44 @@ const CustomDrawer= FC = () => {
                     <TouchableOpacity
                         style={styles.Pages}
                         onPress={() => {
-                            navigation.navigate("Configuracoes")
+                            navigation.navigate("Eletricidade")
                             navigation.dispatch(DrawerActions.closeDrawer())
-                        }}
-                    >
-                        <AntDesign name="setting" size={24} color="black" />
-                        <Text style={styles.PagesText}>Configuracões</Text>
+                        }}>
+                        <MaterialCommunityIcons name="lightning-bolt" size={24} color="black" />
+                        <Text style={styles.PagesText}>Eletricidade</Text>
+                    </TouchableOpacity>
+                </View>
+                <View>
+                    <TouchableOpacity
+                        style={styles.Pages}
+                        onPress={() => {
+                            navigation.navigate("Incendio")
+                            navigation.dispatch(DrawerActions.closeDrawer())
+                        }}>
+                        <FontAwesome5 name="fire" size={24} color="black" />
+                        <Text style={styles.PagesText}>Incendio</Text>
+                    </TouchableOpacity>
+                </View>
+                <View>
+                    <TouchableOpacity
+                        style={styles.Pages}
+                        onPress={() => {
+                            navigation.navigate("Gas")
+                            navigation.dispatch(DrawerActions.closeDrawer())
+                        }}>
+                        <MaterialCommunityIcons name="gas-cylinder" size={24} color="black" />
+                        <Text style={styles.PagesText}>Gás</Text>
+                    </TouchableOpacity>
+                </View>
+                <View>
+                    <TouchableOpacity
+                        style={styles.Pages}
+                        onPress={() => {
+                            navigation.navigate("Sensor")
+                            navigation.dispatch(DrawerActions.closeDrawer())
+                        }}>
+                        <MaterialIcons name="camera-front" size={24} color="black" />
+                        <Text style={styles.PagesText}>Sensor</Text>
                     </TouchableOpacity>
                 </View>
             </ScrollView>

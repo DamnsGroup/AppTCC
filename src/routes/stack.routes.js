@@ -8,7 +8,7 @@ import Incendio from '../screens/Incendio';
 import Sensor from '../screens/Sensor';
 import Gas from '../screens/Gas';
 import Eletricidade from '../screens/Eletricidade';
-import Home from '../screens/Home';
+import AuthRoutes from './tab.routes';
 import CustomDrawer from '../components/CustomDrawer';
 //import { Splash } from '../lotties/Splash';
 import Usuario from '../screens/Usuario';
@@ -24,7 +24,7 @@ function StackNavigator(){
             
             <Stack.Screen name="Login" component={Login} /> 
             <Stack.Screen name="Entrar" component={Entrar} /> 
-            <Stack.Screen name="Home" component={Home} /> 
+            <Stack.Screen name="Home" component={AuthRoutes} />    
             <Stack.Screen name="Incendio" component={Incendio} /> 
             <Stack.Screen name="Sensor" component={Sensor} />   
             <Stack.Screen name="Gas" component={Gas} />   

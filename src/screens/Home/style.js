@@ -130,6 +130,16 @@ export const styles = StyleSheet.create({
         backgroundColor: '#E20000',
     },
 
+    alerta1:{
+        marginTop: 20,
+        borderRadius: 30,
+        marginLeft: 20,
+        marginRight: 20,
+        width: 340,
+        height: 75,
+        backgroundColor: '#000',
+    },
+
     painelAlerta:{
         color: '#fff',
         textAlign: "center",
