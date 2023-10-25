@@ -12,7 +12,8 @@ import { AntDesign, MaterialIcons, MaterialCommunityIcons, Ionicons  } from '@ex
 import fonts from '../styles/fonts';
 
 import DrawerRoutes from './drawer.routes';
-import Usuario from '../screens/Usuario';
+// colocar no drawer.routes a função eletricidade, gas, incendio e proximidade para poder funcionar na barra de baixo
+
 import { DrawerActions, useNavigation } from '@react-navigation/native';
 
 
@@ -20,31 +21,28 @@ const AppTab = createBottomTabNavigator();
 
 const AuthRoutes = () => {
     const navigation = useNavigation();
-{/* arrumar essa budega aqui debaixo mas o codigo ta funcionando então isso que importa, e olha essa mensagem matheus do futuro isso é um aviso */}
-    return (
-        <AppTab.Navigator
-        screenOptions={{
-                tabBarActiveTintColor: "green",
-                tabBarInactiveTintColor: 'gray',
-                tabBarHideOnKeyboard: false,
-                tabBarLabelPosition: 'below-icon',
-                headerShown:false,
-                
-                tabBarStyle:{
-                    height: 0,
-                    paddingTop: 1
-                },
-            }}
+return (
+    <AppTab.Navigator
+    screenOptions={{
+            tabBarActiveTintColor: "green",
+            tabBarInactiveTintColor: 'gray',
+            tabBarHideOnKeyboard: false,
+            tabBarLabelPosition: 'below-icon',
+            headerShown:false,
+            
+            tabBarStyle:{
+                height: 0,
+                paddingTop: 0,
+            },
+        }}
 
-            >
-                <AppTab.Screen
-                    name="Inicio"
-                    component={DrawerRoutes}
-
-                />
-
-        </AppTab.Navigator>
-    )
+        >
+            <AppTab.Screen
+                name="Home"
+                component={DrawerRoutes}
+            />
+    </AppTab.Navigator>
+)
 }
 
 export default AuthRoutes;

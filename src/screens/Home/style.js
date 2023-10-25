@@ -1,6 +1,7 @@
 import { StyleSheet } from "react-native";
 import colors from "../../styles/colors";
 import fonts from "../../styles/fonts";
+import { FlipOutEasyX } from "react-native-reanimated";
 
 export const styles = StyleSheet.create({
     container:{
@@ -8,16 +9,9 @@ export const styles = StyleSheet.create({
     },
 
     header:{
-        backgroundColor: '#fff',
-        shadowColor: 'rgba(0, 0, 0, 0.1)',
-        shadowOpacity: 0.1,
-        elevation: 6,
-        shadowRadius: 15,
-        shadowOffset : { width: 1, height: 5},
-        borderBottomRightRadius: 5,
-        borderBottomLeftRadius: 5,
-        height: 100,
-        marginTop: 30,
+        marginTop: 50,
+        justifyContent: "flex-start",
+        marginBottom: 10,
     },
 
     content: {
@@ -30,128 +24,209 @@ export const styles = StyleSheet.create({
       },
 
     menu:{
-        position: 'absolute',
-        left: 325,
-        top: -45,
+        position: "absolute",
+        padding: 5,
+        borderRadius: 5,
+        right: 40,
+        bottom: 8,
+        backgroundColor: '#000'
     },
 
     primaryTilt:{
-        marginTop: 20,
-        marginLeft: 40,
+        left: 40,
         fontWeight: 'bold',
         fontSize: 25,
         fontFamily: fonts.text,
     },
 
     secondaryTilt:{
-        marginLeft: 40,
-
+        left: 40,
         fontSize: 15,
         fontFamily: fonts.text,
     },
 
-    logo:{
-        width: 140,
-        height: 30,
-        alignSelf: "center",
-        marginTop: 10,
+    bloco:{
+        flexDirection: "row",
+        justifyContent: "center",
+        marginBottom: 20,
     },
 
     painel:{
-        borderRadius: 30,
-        marginLeft: 20,
-        marginRight: 20,
-        width: 350,
-        height: 110,
-        backgroundColor: '#E7F7ED',
+        width: '85%',
+        left: 30,
+        height: 130,
+        backgroundColor: '#fff',
+        borderRadius: 10,
+        elevation: 25,
+        marginBottom: 40,
     },
 
-    painelTilt:{
-        color: '#000',
-        marginTop: 35,
-        textAlign: "center",
+    textAreas:{
+        fontWeight: 'bold',
+        fontSize: 20,
+        left: 30,
+        marginBottom: 20,
+    
+    },
+
+    textPainelTop:{
+        color: '#fff',
         fontWeight: 'bold',
     },
 
-    painelEletricidade:{
-        marginTop: 35,
-        borderRadius: 30,
-        marginLeft: 20,
-        marginRight: 210,
-        width: 150,
-        height: 125,
-        backgroundColor: '#E7F7ED',
+    painelAlertaEletricidade:{
+        borderRadius: 15,
+        marginLeft: 10,
+        marginTop: 10,
+        width: 170,
+        height: 65,
+        backgroundColor: 'green',
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+
+    painelAlertaGas:{
+        borderRadius: 15,
+        marginLeft: 190,
+        marginRight: 10,
+        marginTop: -65,
+        width: 170,
+        height: 65,
+        backgroundColor: 'green',
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+
+    painelAlertaProximidade:{
+        borderRadius: 15,
+        marginLeft: 10,
+        marginRight: 15,
+        marginTop: 15,
+        width: 170,
+        height: 65,
+        backgroundColor: 'green',
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+
+    painelAlertaIncendio:{
+        borderRadius: 15,
+        marginLeft: 190,
+        marginRight: 15,
+        marginTop: -65,
+        width: 170,
+        height: 65,
+        backgroundColor: 'green',
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+
+    painelSistema:{
+        height: 155, // Define a altura dos blocos (ajuste conforme necessário)
+        backgroundColor: '#fff',
+        width: 155,
+        alignItems: 'flex-start',
+        justifyContent: 'space-evenly',
+        flexDirection: 'column',
+        borderRadius: 20,
+        marginHorizontal: 10,
+        elevation: 20, 
+    },
+
+    painelSistemaAlerta:{
+        height: 155, // Define a altura dos blocos (ajuste conforme necessário)
+        backgroundColor: '#E20000',
+        width: 155,
+        alignItems: 'flex-start',
+        justifyContent: 'space-evenly',
+        flexDirection: 'column',
+        borderRadius: 20,
+        marginHorizontal: 10,
+        elevation: 20, 
+    },
+
+    icones:{
+        width: 30,
+        height: 30,
+    },
+
+    backgroundIcone:{
+        width: 45,
+        height: 45,
+        backgroundColor: '#000',
+        alignItems: "center",
+        justifyContent: 'center',
+        borderRadius: 25,
+        left: 12,
+        bottom: 15,
+    },
+
+    backgroundIconeAlerta:{
+        width: 45,
+        height: 45,
+        backgroundColor: '#fff',
+        alignItems: "center",
+        justifyContent: 'center',
+        borderRadius: 25,
+        left: 12,
+        bottom: 15,
     },
 
     painelText:{
-        color: '#000',
+        color: '#C0C0C0',
         textAlign: "center",
-        fontWeight: 'bold',
-        marginTop: 0,
+        fontSize: 12,
+        bottom: 8,
+        left: 10,
+        fontWeight: "bold"
     },
 
-    painelGas:{
-        marginTop: -125,
-        borderRadius: 30,
-        marginLeft: 210,
-        marginRight: 20,
-        width: 150,
-        height: 125,
-        backgroundColor: '#E7F7ED',
-    },
-
-    painelSensor:{
-        marginTop: 30,
-        borderRadius: 30,
-        marginLeft: 20,
-        marginRight: 210,
-        width: 150,
-        height: 125,
-        backgroundColor: '#E7F7ED',
-    },
-
-    painelIncendio:{
-        marginTop: -125,
-        borderRadius: 30,
-        marginLeft: 210,
-        marginRight: 20,
-        width: 150,
-        height: 125,
-        backgroundColor: '#E7F7ED',
+    painelTextAlerta:{
+        color: '#fff',
+        textAlign: "center",
+        fontSize: 12,
+        bottom: 8,
+        left: 10,
+        fontWeight: "bold"
     },
 
     alerta:{
-        marginTop: 20,
-        borderRadius: 30,
-        marginLeft: 20,
-        marginRight: 20,
-        width: 340,
-        height: 75,
+        position: "absolute",
+        right: 22,
+        left: 22,
+        bottom: 10,
+        borderRadius: 2,
+        height: 60,
+        elevation: 100,
+        justifyContent: "center",
+        alignItems: "center",
         backgroundColor: '#E20000',
+        flexDirection: 'row',
     },
 
-    alerta1:{
-        marginTop: 20,
-        borderRadius: 30,
-        marginLeft: 20,
-        marginRight: 20,
-        width: 340,
-        height: 75,
-        backgroundColor: '#000',
+    traco:{
+        height: 30,
+        borderColor: 'white',
+        borderLeftWidth: 1,
+        right: 7,
+        alignItems: "center",
+        justifyContent: "center",
+        flexDirection: 'column'
+    },
+
+    subText:{
+        color: '#fff',
+        left: 14,
+        fontSize: 12,
+        bottom: 2,
     },
 
     painelAlerta:{
         color: '#fff',
+        left: -2,
         textAlign: "center",
         fontWeight: 'bold',
-        marginTop: 0,
-        /* colocar a tag de invisivel*/
-    },
-
-    containerHeader:{
-        flexDirection: 'row',
-        justifyContent: "center",
-        alignItems: "center",
+        fontSize: 16,
     },
 
     titleTasks:{

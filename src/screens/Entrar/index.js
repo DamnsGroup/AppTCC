@@ -10,9 +10,10 @@ import {
     StatusBar,
     Alert,
   } from 'react-native';
+  import { AntDesign } from '@expo/vector-icons';
 
   import AsyncStorage from "@react-native-async-storage/async-storage";
-  
+  import { Ionicons } from '@expo/vector-icons'; 
   //import { Splash } from '../../lotties/Splash'; 
   import api from '../../services/api';
 
@@ -25,7 +26,7 @@ import {
 
     async function entrar(){      
       const obj = { nome, senha };
-      const res = await api.post('pam3etim/bd/login/login.php', obj);
+      const res = await api.post('tcc/login.php', obj);
 
       if(res.data.result === 'Dados Incorretos!'){
         Alert.alert('Ops!', 'Dados Incorretos!');
@@ -54,6 +55,14 @@ import {
         setLogged(2)
       }
     }
+
+    async function inicio(){      
+
+      navigation.reset({
+        index: 0,
+        routes: [{ name: 'Login' }]
+      });
+  }
   
     useEffect(() => {
       checkLogin();
@@ -64,22 +73,31 @@ import {
       <View style={styles.container}>
       <StatusBar translucent hidden />
 
-      <Image style={styles.logo} source={require('../../assets/login1.png')} />
-
-      <Text style={styles.textLogo}>Login</Text>
+      <TouchableOpacity
+        style={styles.voltar}
+        onPress={inicio}
+        >
+        <AntDesign name="left" size={24} color="black" />
+        <Text style={styles.textb}>Voltar</Text>
+      </TouchableOpacity>
       
+      <View style={styles.texts}>
+        <Text style={styles.textLogo}>ForGated</Text>
+        <Text style={styles.textSubLogo}>Conecte-se e prossiga</Text>
+      </View>
+
       <View style={styles.form}>
+      <Text style={styles.textLogin}>Nome</Text>
         <TextInput
           style={styles.login}
-          placeholder="Nome"
           value={nome}
           onChangeText={ (nome) => setNome(nome)}
         />
 
+        <Text style={styles.textLogin}>Senha</Text>
         <TextInput
           secureTextEntry={true}
           style={styles.login}
-          placeholder="Senha"
           value={senha}
           onChangeText={ (senha) => setSenha(senha)}
         />
@@ -88,7 +106,7 @@ import {
           style={styles.loginSave}
           onPress={entrar}
         >
-          <Text style={styles.text}>Login</Text>
+          <Text style={styles.text}>Conectar-Se</Text>
         </TouchableOpacity>
       </View>
     </View>

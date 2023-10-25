@@ -2,59 +2,150 @@ import { StyleSheet } from 'react-native';
 import fonts from '../../styles/fonts';
 
 export const styles = StyleSheet.create({
-    container:{
-      flex: 1,
-      backgroundColor: "#407BFF",
-      alignItems: 'center',
-      paddingHorizontal: 40,
-      justifyContent: 'center'
-    },
-
-    form:{
-      width: '100%',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-
-    login:{
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      backgroundColor: '#FFF',
-      width: '100%',
-      height: 50,
-      paddingLeft: 3,
-      borderBottomWidth: 1,
-      borderBottomColor: '#C1C1C1',
-      marginBottom: 10,
-    },
-
-    menu:{
-      position: 'absolute',
-      left: 20,
-      top: -25,
+  container:{
+    flex: 1,
+    backgroundColor: "#407BFF",
+    alignItems: 'center',
+    paddingHorizontal: 40,
+    justifyContent: 'center'
   },
 
-  body:{
+  header:{
+    flexDirection: 'row',
+    marginTop: 30,
+    justifyContent: 'center'
+  },
+
+  imagemGas:{
+    width: 200,
+    height: 450,
+    bottom: 50,
+  },
+
+  imagemGas2:{
+    width: 200,
+    height: 450,
+    left: -10,
+    bottom: 45,
+  },
+
+  registro:{
+    position: 'absolute',
+    bottom: 0,
+   left: 0,
+    right: 0,
+    borderTopLeftRadius: 25,
+    borderTopRightRadius: 25,
+    height: 80,
+    backgroundColor: '#fff',
+    alignItems: 'flex-start',
+    justifyContent: 'center'
+  },
+
+  registroText:{
+    fontWeight: 'bold',
+    fontSize: 17,
+    left: 15
+  },
+
+  bottomSheet:{
+    backgroundColor: 'white',
+    height: 75,
+    position: 'absolute',
+    borderTopRightRadius: 15,
+    borderTopLeftRadius: 15,
+    bottom: 0,
+    right: 0,
+    left: 0,
+    justifyContent: 'center',
+  },
+
+  contentBottom:{
+    backgroundColor: 'white',
+    borderTopRightRadius: 20,
+    borderTopLeftRadius: 20,
+  },
+
+  textBottom:{
+    left: 22,
+    fontWeight: 'bold',
+    fontSize: 18,
+  },
+
+  textBottomContent:{
     left: 20,
-    right: 20,
-    top: 45,
-    width: '90%',
-    height: 700,
-    backgroundColor: '#E7F7ED',
-    borderRadius: 5,
-},
+    fontWeight: 'bold',
+    fontSize: 16,
+    marginTop: 10,
+    marginBottom: 25,
+  },
 
-grafic:{
-  textAlign:'center',
-  alignItems: 'center',
-  marginBottom: 20,
-  height: 40,
-  fontSize: 16,
-  fontFamily: fonts.text,
-  backgroundColor: '#fff',
+  sair:{
+    left:0,
+    right: 0,
+    height: 30,
+    top: 0,
+    backgroundColor: 'transparent',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 10,
+  },
 
-},
+  sairMarca:{
+    height: 7,
+    width: 75,
+    borderRadius: 10,
+    backgroundColor: '#000',
+  },
+
+  voltar:{
+    flexDirection: 'row',
+    alignItems: 'center',
+    position: 'absolute',
+    top: 10,
+    left: 25
+  },
+
+  alerta:{
+    borderTopLeftRadius: 200,
+    borderTopRightRadius: 200,
+    top: 225,
+    height: 465,
+    alignItems: 'center',
+    backgroundColor: '#D41717'
+  },
+
+  alertaNot:{
+    borderTopLeftRadius: 200,
+    borderTopRightRadius: 200,
+    top: 225,
+    height: 465,
+    alignItems: 'center',
+    backgroundColor: '#4971AD'
+  },
+
+  gasErro:{
+    width: 400,
+    height: 400,
+    bottom: 70,
+  },
+
+  textb:{
+    fontWeight: 'bold'
+  },
+
+  primaryTilt:{
+    textAlign: 'center',
+    fontWeight: 'bold',
+    fontSize: 27,
+    fontFamily: fonts.text,
+  },
+
+  secondaryTilt:{
+    marginLeft: 40,
+    fontSize: 15,
+    fontFamily: fonts.text,
+  },
 
 primaryTilt:{
   marginTop: 15,
@@ -64,111 +155,58 @@ primaryTilt:{
   fontFamily: fonts.text,
 },
 
-  secondaryTilt:{
-      marginLeft: 40,
-      fontSize: 15,
-      fontFamily: fonts.text,
-  },
+secondaryTilt:{
+  marginLeft: 40,
+  fontSize: 15,
+  fontFamily: fonts.text,
+},
 
-    loginSave:{
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: '#000',
-      marginTop: 15,
-      width: '100%',
-      height: 55,
-      borderRadius: 25,
-      marginBottom: 15,
-    },
+puxar:{
+  height: 7,
+  width: 75,
+  borderRadius: 10,
+  backgroundColor: '#D9D9D9',
+  left: 160,
+  marginBottom: 5
+},
 
-    text:{
-      color: '#fff',
-      fontSize: 20,
-      fontWeight: 'bold',
-      fontFamily: fonts.text,
-    },
+mostrarInfo:{
+  alignItems: 'center',
+  textAlign: 'center',
+  justifyContent: 'center',
+  borderRadius: 10,
+  backgroundColor: '#005BFF',
+  borderWidth: 1,
+  width: 130,
+  height: 60,
+  elevation: 20,
+  top: 350,
+  position: 'absolute'
+},
 
-    textFirst:{
-      color: '#fff',
-      fontSize: 25,
-      marginTop: 35,
-    },
+textInfo:{
+  color: 'white',
+  fontSize: 22,
+  fontWeight: 'bold'
+},
 
-    textSecond:{
-      color: '#fff',
-      fontSize: 25 ,
-      marginBottom: 25,
-    },
+mostrarInfoAlerta:{
+  alignItems: 'center',
+  textAlign: 'center',
+  justifyContent: 'center',
+  borderRadius: 10,
+  backgroundColor: '#BA0606',
+  borderWidth: 1,
+  width: 140,
+  height: 70,
+  elevation: 20,
+  top: 350,
+  position: 'absolute'
+},
 
-    logo:{
-      width: 350,
-      height: 350,
-      marginTop: -20,
-      marginBottom: 35
-    },
-
-    textoIcon:{
-      color: 'white',
-      fontSize: 18,
-    },
-
-    google:{
-      flexDirection: 'row',
-      height: 50,
-      alignItems: 'center',
-      justifyContent: 'center',
-      backgroundColor: '#1656ec',
-      borderRadius: 5,
-      width: 50,
-      marginTop: 10,
-    },
-
-    apple:{
-      flexDirection: 'row',
-      height: 50,
-      alignItems: 'center',
-      justifyContent: 'center',
-      backgroundColor: '#1656ec',
-      borderRadius: 5,
-      width: 50,
-      marginTop: 10,
-      marginLeft: 10,
-    },
-
-    row:{
-      flexDirection: 'row',
-    },
-
-    forget:{
-      color: '#737373',
-      fontSize: 14,
-      marginTop: 40,
-    },
-
-    textRow:{
-      alignSelf: 'center',
-      fontFamily: fonts.text,
-      fontSize: 16,
-      color: 'black',
-      marginTop: 5,
-      marginRight: 5,
-    },
-
-    traco:{
-      marginTop: 10,
-      borderTopWidth: 1,
-      borderTopColor: '#C1C1C1',
-      width: '80%',
-    },
-
-    signup:{
-      color: '#737373',
-    },
-
-    signupQ:{
-      color: 'black',
-    },
-
+textInfoAlerta:{
+  color: 'white',
+  fontSize: 19,
+  fontWeight: 'bold'
+},
 })
-
-

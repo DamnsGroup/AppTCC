@@ -54,16 +54,21 @@ export const styles = StyleSheet.create({
     textoNome:{
         fontWeight: 'bold',
         fontSize: 17,
-        color: 'white',
-        marginLeft: 100,
+        color: 'black',
+        marginLeft: 90,
         marginTop: -40,
     },
 
     perfil:{
-        marginLeft: 17,
+        marginLeft: 12,
         borderRadius: 50,
         width: 65,
         height: 65,
         marginTop: 30,
-    }
+    },
+
+    logout2:{
+        width: 35,
+        height: 35,
+    },
 })

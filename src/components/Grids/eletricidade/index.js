@@ -26,23 +26,18 @@ CardUsuarios = ({ data }= DadosProps) => {
     return (
         <>
             {data.cod_eletrica === undefined && data.voltagem === undefined ?
-               
                <Text style={{ color: '#000', fontSize: 13, marginTop:10, alignContent:"center", textAlign:"center" }}>Nenhum Registro Encontrado :(</Text>
                 :
                 <View>
-                        <View
-                            style={styles.box}
-                            onPress={() => setAbrirModal(true)}>     
-                             <View style={{flex:1, flexDirection:'row', justifyContent:'space-between', marginTop:-5}}>                       
-                             <View style={{width:65}}>
-                              <Image style={{width:50, height:50, }} source={{uri:(url + 'apiModelo/imagem.jpg')}} />
-                              </View>
-                              <View style={{ width: '90%', right: 20, top:12, justifyContent:'space-between' }}>
-                            <Text style={{ color: '#000', fontSize:13,  }}>Registro {data.cod_eletrica}:  Voltagem {data.voltagem}</Text>
-                                </View>
-                            </View>      
-                        </View>    
-                </View>
+                    <View style={styles.box} onPress={() => setAbrirModal(true)}>
+                        <View style={styles.cod}>     
+                            <Text style={styles.textCod}>{data.cod_eletrica}</Text>
+                        </View> 
+                        <View style={styles.registro}> 
+                            <Text style={styles.textRegistro}> {data.voltagem}</Text>
+                        </View>
+                    </View>
+                </View>    
             }
         </>
     );

@@ -5,14 +5,11 @@ import { NavigationContainer } from '@react-navigation/native';
 import Login from '../screens/FirstPage';
 import Entrar from '../screens/Entrar';
 import Incendio from '../screens/Incendio';
-import Sensor from '../screens/Sensor';
+import Proximidade from '../screens/Proximidade';
 import Gas from '../screens/Gas';
 import Eletricidade from '../screens/Eletricidade';
 import AuthRoutes from './tab.routes';
-import CustomDrawer from '../components/CustomDrawer';
 //import { Splash } from '../lotties/Splash';
-import Usuario from '../screens/Usuario';
-import NovoUsuario from '../screens/NovoUsuario';
 
 
 
@@ -26,12 +23,9 @@ function StackNavigator(){
             <Stack.Screen name="Entrar" component={Entrar} /> 
             <Stack.Screen name="Home" component={AuthRoutes} />    
             <Stack.Screen name="Incendio" component={Incendio} /> 
-            <Stack.Screen name="Sensor" component={Sensor} />   
+            <Stack.Screen name="Proximidade" component={Proximidade} />   
             <Stack.Screen name="Gas" component={Gas} />   
-            <Stack.Screen name="Eletricidade" component={Eletricidade} />    
-            <Stack.Screen name="Usuario" component={Usuario} /> 
-            <Stack.Screen name="NovoUsuario" component={NovoUsuario} /> 
-          
+            <Stack.Screen name="Eletricidade" component={Eletricidade} />   
         </Stack.Navigator>
     )
 }
