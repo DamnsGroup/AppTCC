@@ -63,6 +63,14 @@ import {
         routes: [{ name: 'Login' }]
       });
   }
+
+  async function entrar2(){      
+
+    navigation.reset({
+      index: 0,
+      routes: [{ name: 'Home' }]
+    });
+}
   
     useEffect(() => {
       checkLogin();

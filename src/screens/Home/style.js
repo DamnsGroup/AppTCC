@@ -158,7 +158,7 @@ export const styles = StyleSheet.create({
         justifyContent: 'center',
         borderRadius: 25,
         left: 12,
-        bottom: 15,
+        bottom: -3,
     },
 
     backgroundIconeAlerta:{
@@ -169,14 +169,30 @@ export const styles = StyleSheet.create({
         justifyContent: 'center',
         borderRadius: 25,
         left: 12,
-        bottom: 15,
+        bottom: -3,
     },
 
     painelText:{
         color: '#C0C0C0',
         textAlign: "center",
         fontSize: 12,
-        bottom: 8,
+        bottom: -13,
+        left: 10,
+        fontWeight: "bold"
+    },
+
+    painelTextEstado:{
+        textAlign: "center",
+        fontSize: 14,
+        bottom: 4,
+        left: 10,
+        fontWeight: "bold"
+    },
+    painelTextEstadoAlerta:{
+        color: '#fff',
+        textAlign: "center",
+        fontSize: 14,
+        bottom: 4,
         left: 10,
         fontWeight: "bold"
     },
@@ -185,7 +201,7 @@ export const styles = StyleSheet.create({
         color: '#fff',
         textAlign: "center",
         fontSize: 12,
-        bottom: 8,
+        bottom: -13,
         left: 10,
         fontWeight: "bold"
     },

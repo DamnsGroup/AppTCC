@@ -12,8 +12,15 @@ export const styles = StyleSheet.create({
 
   header:{
     flexDirection: 'row',
-    marginTop: 30,
-    justifyContent: 'center'
+    backgroundColor: '#2e2e2e',
+    justifyContent: 'center',
+    height: 225,
+  },
+
+  camf:{
+    width: '100%',
+    height: '100%',
+    position: 'absolute'
   },
 
   imagemTermometro:{
@@ -98,32 +105,21 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     position: 'absolute',
-    top: 10,
+    top: 43,
     left: 25
   },
   
   textb:{
+    color: '#fff',
     fontWeight: 'bold'
   },
 
-  primaryTilt:{
-    textAlign: 'center',
-    fontWeight: 'bold',
-    fontSize: 27,
-    fontFamily: fonts.text,
-  },
-
-  secondaryTilt:{
-    marginLeft: 40,
-    fontSize: 15,
-    fontFamily: fonts.text,
-  },
-
 primaryTilt:{
-  marginTop: 15,
+  marginTop: 40,
   textAlign: 'center',
   fontWeight: 'bold',
   fontSize: 23,
+  color: '#fff',
   fontFamily: fonts.text,
 },
 
@@ -136,7 +132,7 @@ secondaryTilt:{
 alerta:{
   borderTopLeftRadius: 200,
   borderTopRightRadius: 200,
-  top: 225,
+  top: 135,
   height: 465,
   backgroundColor: '#fff',
   alignItems: 'center'
@@ -145,7 +141,7 @@ alerta:{
 alertaNot:{
   borderTopLeftRadius: 200,
   borderTopRightRadius: 200,
-  top: 225,
+  top: 135,
   height: 465,
   backgroundColor: '#fff',
   alignItems: 'center'
@@ -160,7 +156,7 @@ camera:{
 textMovimento:{
   fontSize: 20,
   fontWeight: 'bold',
-  bottom: -60,
+  bottom: -50,
 },
 
 puxar:{

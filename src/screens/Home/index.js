@@ -197,21 +197,22 @@ export default function Home() {
           </View>
           <Text style={styles.textAreas}>Áreas</Text>
           <View style={styles.bloco}>  
-
-            {/* sistema de eletricidade */}
-            {showAlertButtonEletricidade === (true) ? (
-            <TouchableOpacity  onPress={eletricidade} style={styles.painelSistemaAlerta}>
+          {/* sistema de incendio */}
+          {showAlertButtonIncendio === (true) ? (
+            <TouchableOpacity  onPress={incendio} style={styles.painelSistemaAlerta}>
               <View style={styles.backgroundIconeAlerta}>
-                <Image source={require('../../assets/lampIconeAlerta.png')} style={styles.icones}/>
+                <Image source={require('../../assets/temperatureIconeAlerta.png')} style={styles.icones}/>
               </View>
-              <Text style={styles.painelTextAlerta}>ELETRICIDADE</Text>
+              <Text style={styles.painelTextAlerta}>TEMPERATURA</Text>
+              <Text style={styles.painelTextEstadoAlerta}>Detectado</Text>
             </TouchableOpacity>
             ) : 
-            (<TouchableOpacity  onPress={eletricidade} style={styles.painelSistema}>
+            (<TouchableOpacity  onPress={incendio} style={styles.painelSistema}>
               <View style={styles.backgroundIcone}>
-                <Image source={require('../../assets/lampIcone.png')} style={styles.icones}/>
+                <Image source={require('../../assets/temperatureIcone.png')} style={styles.icones}/>
               </View>
-              <Text style={styles.painelText}>ELETRICIDADE</Text>
+              <Text style={styles.painelText}>TEMPERATURA</Text>
+              <Text style={styles.painelTextEstado}>Normal</Text>
             </TouchableOpacity>
             )}
             
@@ -222,6 +223,7 @@ export default function Home() {
                 <Image source={require('../../assets/gasIconeAlerta.png')} style={styles.icones}/>
               </View>
               <Text style={styles.painelTextAlerta}>SENSOR DE GÁS</Text>
+              <Text style={styles.painelTextEstadoAlerta}>Detectado</Text>
             </TouchableOpacity>
             ) : 
             (<TouchableOpacity  onPress={gas} style={styles.painelSistema}>
@@ -229,12 +231,30 @@ export default function Home() {
                 <Image source={require('../../assets/gasIcone.png')} style={styles.icones}/>
               </View>
               <Text style={styles.painelText}>SENSOR DE GÁS</Text>
+              <Text style={styles.painelTextEstado}>Normal</Text>
             </TouchableOpacity>
             )}
           </View>
 
           <View style={styles.bloco}>
-
+              {/* sistema de eletricidade */}
+            {showAlertButtonEletricidade === (true) ? (
+            <TouchableOpacity  onPress={eletricidade} style={styles.painelSistemaAlerta}>
+              <View style={styles.backgroundIconeAlerta}>
+                <Image source={require('../../assets/lampIconeAlerta.png')} style={styles.icones}/>
+              </View>
+              <Text style={styles.painelTextAlerta}>ELETRICIDADE</Text>
+              <Text style={styles.painelTextEstadoAlerta}>Detectado</Text>
+            </TouchableOpacity>
+            ) : 
+            (<TouchableOpacity  onPress={eletricidade} style={styles.painelSistema}>
+              <View style={styles.backgroundIcone}>
+                <Image source={require('../../assets/lampIcone.png')} style={styles.icones}/>
+              </View>
+              <Text style={styles.painelText}>ELETRICIDADE</Text>
+              <Text style={styles.painelTextEstado}>Normal</Text>
+            </TouchableOpacity>
+            )}
             {/* sistema de proximidade */}
             {showAlertButtonProximidade === (true) ? (
             <TouchableOpacity  onPress={proximidade} style={styles.painelSistemaAlerta}>
@@ -242,6 +262,7 @@ export default function Home() {
                 <Image source={require('../../assets/webcamIconeAlerta.png')} style={styles.icones}/>
               </View>
               <Text style={styles.painelTextAlerta}>MOVIMENTO</Text>
+              <Text style={styles.painelTextEstadoAlerta}>Detectado</Text>
             </TouchableOpacity>
             ) : 
             (<TouchableOpacity  onPress={proximidade} style={styles.painelSistema}>
@@ -249,23 +270,7 @@ export default function Home() {
                 <Image source={require('../../assets/webcamIcone.png')} style={styles.icones}/>
               </View>
               <Text style={styles.painelText}>MOVIMENTO</Text>
-            </TouchableOpacity>
-            )}
-
-            {/* sistema de incendio */}
-            {showAlertButtonIncendio === (true) ? (
-            <TouchableOpacity  onPress={incendio} style={styles.painelSistemaAlerta}>
-              <View style={styles.backgroundIconeAlerta}>
-                <Image source={require('../../assets/temperatureIconeAlerta.png')} style={styles.icones}/>
-              </View>
-              <Text style={styles.painelTextAlerta}>TEMPERATURA</Text>
-            </TouchableOpacity>
-            ) : 
-            (<TouchableOpacity  onPress={incendio} style={styles.painelSistema}>
-              <View style={styles.backgroundIcone}>
-                <Image source={require('../../assets/temperatureIcone.png')} style={styles.icones}/>
-              </View>
-              <Text style={styles.painelText}>TEMPERATURA</Text>
+              <Text style={styles.painelTextEstado}>Sem Movimento</Text>
             </TouchableOpacity>
             )}
           </View> 

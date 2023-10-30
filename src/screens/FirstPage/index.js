@@ -40,12 +40,12 @@ import {
     <View style={styles.container}>
       <Image source={require('../../assets/fundo.png')} style={styles.backgroundImage}/>
 
-      {/* <LottieView
+      <LottieView
         source={require('../../assets/animation.json')}
         autoPlay
         loop={true}
         style={styles.videoCasa}
-      /> */}
+      />
 
       <View style={styles.top}>
         <Image source={require('../../assets/logo.png')} style={styles.logohome}/>

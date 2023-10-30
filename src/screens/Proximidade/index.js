@@ -106,8 +106,9 @@ export default function Usuario() {
       <StatusBar barStyle="light-content" />
       <View style={{ flex: 1, backgroundColor: '#fff' }}>
         <View style={styles.header}>
+          <Image style={styles.camf} source={require('../../assets/camf.png')}/>
           <TouchableOpacity style={styles.voltar} onPress={home}>
-            <AntDesign name="left" size={24} color="black" />
+            <AntDesign name="left" size={24} color="white" />
             <Text style={styles.textb}>Voltar</Text>
           </TouchableOpacity>
           <Text style={styles.primaryTilt}>Movimento</Text>
@@ -138,7 +139,7 @@ export default function Usuario() {
           style={{ justifyContent: 'flex-end', margin: 0 }}
           onBackdropPress={toggleBottomSheet}
         >
-          <ScrollView style={styles.contentBottom}>
+          <View style={styles.contentBottom}>
             <TouchableOpacity onPress={toggleBottomSheet}>
               <View style={styles.sair}>
                 <View style={styles.sairMarca}></View>
@@ -171,7 +172,7 @@ export default function Usuario() {
                 { length: 50, offset: 50 * index, index }
               )}
             />
-          </ScrollView>
+          </View>
         </Modal>
       </View>
     </View>

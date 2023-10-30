@@ -146,7 +146,7 @@ export default function Usuario() {
           style={{ justifyContent: 'flex-end', margin: 0 }}
           onBackdropPress={toggleBottomSheet}
         >
-          <ScrollView style={styles.contentBottom}>
+          <View style={styles.contentBottom}>
             <TouchableOpacity onPress={toggleBottomSheet}>
               <View style={styles.sair}>
                 <View style={styles.sairMarca}></View>
@@ -179,7 +179,7 @@ export default function Usuario() {
                 { length: 50, offset: 50 * index, index }
               )}
             />
-          </ScrollView>
+          </View>
         </Modal>
       </View>
     </View>

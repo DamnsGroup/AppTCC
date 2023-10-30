@@ -97,7 +97,7 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     position: 'absolute',
-    top: 10,
+    top: 19,
     left: 25
   },
 
@@ -194,12 +194,12 @@ mostrarInfo:{
   justifyContent: 'center',
   borderRadius: 10,
   backgroundColor: '#005BFF',
-  borderWidth: 1,
-  width: 100,
+  width: 120,
   height: 60,
   elevation: 20,
   top: 350,
-  position: 'absolute'
+  position: 'absolute',
+  backgroundColor: '#46D18E'
 },
 
 textInfo:{

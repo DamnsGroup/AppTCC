@@ -13,7 +13,6 @@ const DadosProps= {
     data: {
         cod_incendio: string,
         temperatura: string,  
-               
     }
 }
 
