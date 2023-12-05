@@ -120,7 +120,7 @@ export default function Usuario() {
           <View style={styles.alerta}>
             <Image style={styles.imagemEletricidade} source={require('../../assets/eletricidadeErro.gif')}/>
             <View style={styles.mostrarInfoAlerta}>
-              <Text style={styles.textInfoAlerta}>Voltagem</Text>
+              <Text style={styles.textInfoAlerta}>Perigo</Text>
             </View>
           </View>
         ) : (

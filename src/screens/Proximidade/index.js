@@ -1,7 +1,7 @@
 import { useNavigation } from "@react-navigation/core";
 import React, { useEffect, useState, useRef } from "react";
 import { styles } from './style';
-import { ScrollView, Text, ActivityIndicator, FlatList, Image, TextInput, TouchableOpacity, View, StatusBar, Dimensions, Alert } from 'react-native';
+import { ScrollView, Text, ActivityIndicator, FlatList, Image, Switch, TextInput, TouchableOpacity, View, StatusBar, Dimensions, Alert } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 import Header from '../../components/Header';
@@ -30,6 +30,30 @@ export default function Usuario() {
   const toggleBottomSheet = () => {
     setBottomSheetVisible(!isBottomSheetVisible);
   };
+    const [valor, setValor] = useState(false);
+  
+    const toggleSwitch = () => {
+      const novoValor = !valor;
+      setValor(novoValor);
+      
+      // Chame a função NewValue para enviar o novo valor para o caminho desejado.
+      NewValue(novoValor);
+    };
+  
+    // Função para enviar o novo valor para o servidor
+    const NewValue = async (novoValor) => {
+      try {
+        const obj = { valor: novoValor ? 1 : 0 };
+        console.log(obj);
+        console.log(valor);
+        const res = await api.post('tcc/dados/onoff.php', obj);
+        // Lida com a resposta da API, se necessário
+        console.log('Resposta da API:', res.data);
+      } catch (error) {
+        // Lida com erros da API, se ocorrerem
+        console.error('Erro ao enviar valor para a API:', error);
+      }
+    };
 
   async function home() {
 
@@ -113,6 +137,19 @@ export default function Usuario() {
           </TouchableOpacity>
           <Text style={styles.primaryTilt}>Movimento</Text>
         </View>
+        <View style={styles.LigarOFF}>
+          <Text style={styles.textON}>Caso necessário, ative ou desative</Text>
+          <Text style={styles.textON}>o sensor de proximidade</Text>
+          <View style={styles.desligarON}>
+            <View style={styles.switchContainer}>
+              <Text style={styles.Text}>{valor ? '' : ''}</Text>
+              <Switch
+                value={valor}
+                onValueChange={toggleSwitch}
+              />
+            </View>
+         </View>
+        </View>
         {showAlertButton === 0 ? (
           <View style={styles.alertaNot}>
             <Text style={styles.textMovimento}>MOVIMENTO DETECTADO</Text>
@@ -123,10 +160,14 @@ export default function Usuario() {
               loop={false}
             />
           </View>
-        ) : (
+        ) : showAlertButton === 1 ?(
           <View style={styles.alerta}>
             <Text style={styles.textMovimento}>NENHUM MOVIMENTO DETECTADO</Text>
             <Image style={styles.camera} source={require('../../assets/cam.gif')} />
+          </View>
+        ) : (
+          <View style={styles.alertaDesligado}>
+            <Text style={styles.textDesligado}>SISTEMA DESLIGADO</Text>
           </View>
         )}
 

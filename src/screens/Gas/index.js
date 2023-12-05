@@ -93,7 +93,7 @@ async function fetchPage() {
    setQuant(response.data.resultado); // Substitua pelo nome real do campo no seu banco de dados
 
    const quanti = response.data.resultado.map(item => item.gas_info);
-   if (quanti == 'Vazamento detectado') {
+   if (quanti == 'Vazamento de gas detectado') {
      setShowAlertButton(0);
    }
    else {

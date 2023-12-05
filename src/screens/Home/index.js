@@ -70,7 +70,7 @@ export default function Home() {
           setQuantGas(response.data.resultado); // Substitua pelo nome real do campo no seu banco de dados
           
           const quantiGas = response.data.resultado.map(item => item.gas_info);
-          if (quantiGas == "Vazamento detectado") {
+          if (quantiGas == "Vazamento de gas detectado") {
             setShowAlertButtonGas(true);
           } else {
             setShowAlertButtonGas(false);
@@ -154,7 +154,7 @@ export default function Home() {
           <View style={{ flex: 2, marginTop: 40}}>
           <View style={styles.painel}>
             <Image
-              source={require('../../assets/fundo2.png')}
+              source={require('../../assets/gifsplash.gif')}
               style={{
                 position: 'absolute',
                 width: '100%',

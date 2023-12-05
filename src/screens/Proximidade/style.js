@@ -17,18 +17,28 @@ export const styles = StyleSheet.create({
     height: 225,
   },
 
+  LigarOFF:{
+    marginTop: 16,
+    justifyContent: 'center',
+  },
+
+  textON:{
+    paddingLeft: 40,
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+
+  switch:{
+    position: 'absolute',
+    left: 180,
+    top: 75,
+    transform: [{scaleX: 2.0}, {scaleY: 2.0}]
+  },
+
   camf:{
     width: '100%',
     height: '100%',
     position: 'absolute'
-  },
-
-  imagemTermometro:{
-    width: 200,
-    height: 450,
-    transform: [{ rotate: '180deg' }],
-    left: 80,
-    bottom: 150,
   },
 
   registro:{
@@ -132,16 +142,25 @@ secondaryTilt:{
 alerta:{
   borderTopLeftRadius: 200,
   borderTopRightRadius: 200,
-  top: 135,
+  marginTop: 30,
   height: 465,
   backgroundColor: '#fff',
   alignItems: 'center'
 },
 
+alertaDesligado:{
+  borderTopLeftRadius: 200,
+  borderTopRightRadius: 200,
+  marginTop: 115,
+  height: 465,
+  alignItems: 'center',
+  justifyContent: 'center'
+},
+
 alertaNot:{
   borderTopLeftRadius: 200,
   borderTopRightRadius: 200,
-  top: 135,
+  marginTop: 30,
   height: 465,
   backgroundColor: '#fff',
   alignItems: 'center'
@@ -153,10 +172,29 @@ camera:{
   right: 2,
 },
 
+desligarON: {
+  alignItems: 'center',
+  top: 25,
+},
+switchContainer: {
+  flexDirection: 'row',
+  alignItems: 'center',
+  transform: [{scaleX: 2.0}, {scaleY: 2.0}]
+},
+Text:{
+  fontSize: 10
+},
+
 textMovimento:{
   fontSize: 20,
   fontWeight: 'bold',
   bottom: -50,
+},
+
+textDesligado:{
+  fontSize: 20,
+  fontWeight: 'bold',
+  marginBottom: 150,
 },
 
 puxar:{
